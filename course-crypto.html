@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crypto & Web3 Course | KY — AI Editor & Creative Strategist</title>
+  <meta name="description" content="12-session Crypto & Web3 roadmap — từ blockchain cơ bản đến trading, DeFi và quản lý danh mục đầu tư." />
+  <meta property="og:title" content="Crypto & Web3 Course | KY" />
+  <meta property="og:description" content="Master crypto trong 12 buổi — blockchain, trading, DeFi, investment." />
+  <meta property="og:type" content="website" />
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/misans@4.0.0/lib/Normal/MiSans-Bold.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Inline text-token fallback for crypto session tools (no logo assets yet) */
+    .tok {
+      display: inline-flex;
+      align-items: center;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.6px;
+      padding: 4px 8px;
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 6px;
+      color: rgba(255,255,255,0.65);
+      background: rgba(255,255,255,0.03);
+      text-transform: uppercase;
+    }
+    .tok-btc { color: #f7931a; border-color: rgba(247,147,26,0.35); }
+    .tok-eth { color: #8a92b2; border-color: rgba(138,146,178,0.35); }
+    .tok-sol { color: #9945ff; border-color: rgba(153,69,255,0.35); }
+    .tok-bnb { color: #f3ba2f; border-color: rgba(243,186,47,0.35); }
+    .tok-tv  { color: #2962ff; border-color: rgba(41,98,255,0.35); }
+    .tok-dex { color: #ff007a; border-color: rgba(255,0,122,0.35); }
+    .tok-def { color: #2ebac6; border-color: rgba(46,186,198,0.35); }
+  </style>
+</head>
+<body class="page-course-crypto">
+  <!-- Preloader -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader-logo">K</div>
+  </div>
+  <a href="#" class="skip-nav">Skip to main content</a>
+  <div class="page-transition-overlay" id="pageTransition" aria-hidden="true"></div>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="logos/cky-logo.webp" alt="CKY" class="nav-logo-img" />
+      </a>
+      <div class="nav-notif" id="navNotif"></div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="courses.html" class="nav-link nav-active">Courses</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <header class="page-header">
+    <div class="container">
+      <div class="breadcrumb"><a href="courses.html">&larr; All Courses</a></div>
+      <div class="section-label">Crypto &amp; Web3 Course</div>
+      <h1 class="page-title">Master Crypto<br><em>&amp; Web3</em></h1>
+      <p class="page-desc">12 buổi học từ blockchain cơ bản đến DeFi &amp; quản lý danh mục — thực hành với ví thật, TradingView, on-chain tools và khung quản trị rủi ro.</p>
+    </div>
+  </header>
+
+  <!-- OVERVIEW: 3 Phases -->
+  <section class="section">
+    <div class="container">
+      <div class="pricing-grid">
+
+        <div class="pt-card">
+          <div class="pt-header">
+            <div class="pt-tier-row">
+              <span class="pt-tier-label">Level 01</span>
+              <span class="pt-tier-pill pill-neutral">Phase 1</span>
+            </div>
+            <div class="pt-name">Crypto Basics</div>
+            <div class="pt-caption">Foundations · Buổi 1 — 4</div>
+          </div>
+          <div class="pt-features">
+            <div class="pt-feat"><span class="fcheck">&#10003;</span><span>Giới thiệu Crypto &amp; Blockchain</span></div>
+            <div class="pt-feat"><span class="fcheck">&#10003;</span><span>Ví &amp; bảo mật seed phrase</span></div>
+            <div class="pt-feat"><span class="fcheck">&#10003;</span><span>Sàn giao dịch &amp; giao dịch đầu tiên</span></div>
+            <div class="pt-feat"><span class="fcheck">&#10003;</span><span>Đọc biểu đồ &amp; công cụ cơ bản</span></div>
+            <div class="session-tools">
+              <span class="tok tok-btc">BTC</span>
+              <span class="tok tok-eth">ETH</span>
+              <span class="tok tok-tv">TradingView</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-card pt-featured">
+          <div class="pt-header">
+            <div class="pt-tier-row">
+              <span class="pt-tier-label">Level 02</span>
+              <span class="pt-tier-pill pill-popular">Phase 2 · Most Popular</span>
+            </div>
+            <div class="pt-name">Trading &amp; Analysis</div>
+            <div class="pt-caption">Advanced · Buổi 5 — 8</div>
+          </div>
+          <div class="pt-features">
+            <div class="pt-feat"><span class="fcheck">&#10003;</span><span>All Level 01 content included</span></div>
+            <div class="pt-feat"><span class="fcheck">&#10003;</span><span>Technical Analysis nâng cao</span></div>
+            <div class="pt-feat"><span class="fcheck">&#10003;</span><span>On-chain analysis &amp; smart money</span></div>
+            <div class="pt-feat"><span class="fcheck">&#10003;</span><span>Risk management &amp; tâm lý</span></div>
+            <div class="pt-feat"><span class="fcheck">&#10003;</span><span>Narratives &amp; research dự án</span></div>
+            <div class="session-tools">
+              <span class="tok tok-tv">TradingView</span>
+              <span class="tok tok-eth">Etherscan</span>
+              <span class="tok tok-bnb">Binance</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-card pt-premium">
+          <div class="pt-header">
+            <div class="pt-tier-row">
+              <span class="pt-tier-label">Level 03</span>
+              <span class="pt-tier-pill pill-premium">Phase 3 · Premium</span>
+            </div>
+            <div class="pt-name">DeFi &amp; Investment Mastery</div>
+            <div class="pt-caption">Mastery · Buổi 9 — 12</div>
+          </div>
+          <div class="pt-features">
+            <div class="pt-feat"><span class="fcheck">&#10003;</span><span>All Level 01 &amp; 02 content included</span></div>
+            <div class="pt-feat"><span class="fcheck">&#10003;</span><span>DeFi &amp; yield strategies</span></div>
+            <div class="pt-feat"><span class="fcheck">&#10003;</span><span>NFT, airdrop hunting &amp; Web3</span></div>
+            <div class="pt-feat"><span class="fcheck">&#10003;</span><span>Portfolio management &amp; thuế</span></div>
+            <div class="pt-feat"><span class="fcheck">&#10003;</span><span>Xây dựng nghề nghiệp Web3</span></div>
+            <div class="session-tools">
+              <span class="tok tok-dex">Uniswap</span>
+              <span class="tok tok-def">Aave</span>
+              <span class="tok tok-sol">Solana</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- DETAILED CURRICULUM -->
+  <section class="section bg-surface" id="curriculum">
+    <div class="container">
+
+      <!-- Phase 1 -->
+      <div class="curriculum-phase phase-1" id="phase-1">
+        <div class="course-track-header">
+          <div class="phase-level-badge">
+            <span class="pt-tier-label">LEVEL 01 · CRYPTO BASICS</span>
+          </div>
+          <h2 class="course-track-title">Phase 1 — Foundations</h2>
+          <p class="course-track-desc">Nền tảng blockchain, ví bảo mật, sàn giao dịch và đọc biểu đồ cơ bản. Dành cho người mới bắt đầu hoàn toàn.</p>
+        </div>
+        <div class="curriculum-grid">
+
+          <div class="session-card">
+            <span class="session-level-tag">L01</span>
+            <div class="session-num">Buổi 01</div>
+            <h3 class="session-title">Giới thiệu Crypto &amp; Blockchain</h3>
+            <p class="session-desc">Bức tranh toàn cảnh về tiền số — hiểu công nghệ và các loại tài sản trước khi xuống tiền.</p>
+            <ul class="session-topics">
+              <li><span class="fcheck">&#10003;</span>Lịch sử Bitcoin &amp; cách blockchain hoạt động</li>
+              <li><span class="fcheck">&#10003;</span>Layer 1 vs Layer 2 — Ethereum, Solana, Polygon</li>
+              <li><span class="fcheck">&#10003;</span>Phân loại coin: BTC, ETH, stablecoin, altcoin, memecoin</li>
+              <li><span class="fcheck">&#10003;</span>Rủi ro, cơ hội &amp; mindset đúng khi bắt đầu</li>
+            </ul>
+            <div class="session-tools">
+              <span class="tok tok-btc">BTC</span>
+              <span class="tok tok-eth">ETH</span>
+              <span class="tok tok-sol">SOL</span>
+            </div>
+          </div>
+
+          <div class="session-card">
+            <span class="session-level-tag">L01</span>
+            <div class="session-num">Buổi 02</div>
+            <h3 class="session-title">Ví &amp; Bảo mật</h3>
+            <p class="session-desc">Not your keys, not your coins — học cách tự custody tài sản một cách an toàn.</p>
+            <ul class="session-topics">
+              <li><span class="fcheck">&#10003;</span>Hot wallet vs cold wallet — MetaMask, Trust, Ledger</li>
+              <li><span class="fcheck">&#10003;</span>Seed phrase, private key, 2FA &amp; recovery</li>
+              <li><span class="fcheck">&#10003;</span>Nhận diện scam, phishing, fake airdrop</li>
+              <li><span class="fcheck">&#10003;</span>Thực hành: tạo ví, gửi/nhận coin đầu tiên</li>
+            </ul>
+            <div class="session-tools">
+              <span class="tok tok-eth">MetaMask</span>
+              <span class="tok tok-btc">Ledger</span>
+            </div>
+          </div>
+
+          <div class="session-card">
+            <span class="session-level-tag">L01</span>
+            <div class="session-num">Buổi 03</div>
+            <h3 class="session-title">Sàn giao dịch &amp; Giao dịch đầu tiên</h3>
+            <p class="session-desc">Làm chủ sàn CEX &amp; DEX — từ mua coin đầu tiên đến rút về ví cá nhân.</p>
+            <ul class="session-topics">
+              <li><span class="fcheck">&#10003;</span>CEX (Binance, OKX) vs DEX (Uniswap, PancakeSwap)</li>
+              <li><span class="fcheck">&#10003;</span>KYC, deposit/withdraw, phí mạng &amp; slippage</li>
+              <li><span class="fcheck">&#10003;</span>Spot vs futures — chỉ mới nên dùng spot</li>
+              <li><span class="fcheck">&#10003;</span>Đặt lệnh market/limit &amp; rút về ví self-custody</li>
+            </ul>
+            <div class="session-tools">
+              <span class="tok tok-bnb">Binance</span>
+              <span class="tok tok-dex">Uniswap</span>
+            </div>
+          </div>
+
+          <div class="session-card">
+            <span class="session-level-tag">L01</span>
+            <div class="session-num">Buổi 04</div>
+            <h3 class="session-title">Đọc biểu đồ &amp; Công cụ cơ bản</h3>
+            <p class="session-desc">TradingView &amp; on-chain tools — đọc thị trường bằng dữ liệu thay vì cảm tính.</p>
+            <ul class="session-topics">
+              <li><span class="fcheck">&#10003;</span>Candlestick, support/resistance, volume</li>
+              <li><span class="fcheck">&#10003;</span>TradingView: workspace, indicators, alerts</li>
+              <li><span class="fcheck">&#10003;</span>CoinGecko, CoinMarketCap, DeFiLlama</li>
+              <li><span class="fcheck">&#10003;</span>Etherscan cơ bản — đọc transaction &amp; token</li>
+            </ul>
+            <div class="session-tools">
+              <span class="tok tok-tv">TradingView</span>
+              <span class="tok tok-eth">Etherscan</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Phase 2 -->
+      <div class="curriculum-phase phase-2" id="phase-2">
+        <div class="course-track-header">
+          <div class="phase-level-badge">
+            <span class="pt-tier-label">LEVEL 02 · TRADING &amp; ANALYSIS</span>
+          </div>
+          <h2 class="course-track-title">Phase 2 — Trading &amp; Analysis</h2>
+          <p class="course-track-desc">TA nâng cao, on-chain analysis, risk management và nghiên cứu narrative. Bao gồm toàn bộ nội dung Level 01.</p>
+        </div>
+        <div class="curriculum-grid">
+
+          <div class="session-card">
+            <span class="session-level-tag">L02</span>
+            <div class="session-num">Buổi 05</div>
+            <h3 class="session-title">Technical Analysis nâng cao</h3>
+            <p class="session-desc">Vượt qua candlestick cơ bản — dùng indicators &amp; patterns để ra quyết định có hệ thống.</p>
+            <ul class="session-topics">
+              <li><span class="fcheck">&#10003;</span>Trend lines, Fibonacci retracement/extension</li>
+              <li><span class="fcheck">&#10003;</span>Indicators: RSI, MACD, EMA, Bollinger Bands</li>
+              <li><span class="fcheck">&#10003;</span>Chart patterns: H&amp;S, double top, flag, triangle</li>
+              <li><span class="fcheck">&#10003;</span>Multi-timeframe analysis &amp; confluence</li>
+            </ul>
+            <div class="session-tools">
+              <span class="tok tok-tv">TradingView</span>
+            </div>
+          </div>
+
+          <div class="session-card">
+            <span class="session-level-tag">L02</span>
+            <div class="session-num">Buổi 06</div>
+            <h3 class="session-title">On-chain Analysis &amp; Smart Money</h3>
+            <p class="session-desc">Đọc blockchain như đọc sổ cái công khai — follow dòng tiền của whale &amp; institution.</p>
+            <ul class="session-topics">
+              <li><span class="fcheck">&#10003;</span>Etherscan nâng cao, Dune Analytics, Nansen</li>
+              <li><span class="fcheck">&#10003;</span>Whale tracking &amp; token holder distribution</li>
+              <li><span class="fcheck">&#10003;</span>Arkham Intelligence — label wallet</li>
+              <li><span class="fcheck">&#10003;</span>Theo dõi dòng tiền sàn &amp; smart money wallet</li>
+            </ul>
+            <div class="session-tools">
+              <span class="tok tok-eth">Etherscan</span>
+              <span class="tok tok-def">Dune</span>
+            </div>
+          </div>
+
+          <div class="session-card">
+            <span class="session-level-tag">L02</span>
+            <div class="session-num">Buổi 07</div>
+            <h3 class="session-title">Risk Management &amp; Tâm lý giao dịch</h3>
+            <p class="session-desc">Kỹ năng quan trọng nhất của trader — bảo toàn vốn và kiểm soát cảm xúc.</p>
+            <ul class="session-topics">
+              <li><span class="fcheck">&#10003;</span>Position sizing &amp; nguyên tắc 1-2% per trade</li>
+              <li><span class="fcheck">&#10003;</span>Stop-loss, take-profit &amp; R/R ratio</li>
+              <li><span class="fcheck">&#10003;</span>Trading journal — review &amp; cải thiện</li>
+              <li><span class="fcheck">&#10003;</span>Chống FOMO, panic sell &amp; revenge trading</li>
+            </ul>
+            <div class="session-tools">
+              <span class="tok tok-tv">TradingView</span>
+              <span class="tok tok-btc">Journal</span>
+            </div>
+          </div>
+
+          <div class="session-card">
+            <span class="session-level-tag">L02</span>
+            <div class="session-num">Buổi 08</div>
+            <h3 class="session-title">Narratives &amp; Nghiên cứu dự án</h3>
+            <p class="session-desc">Mua đúng narrative sớm = lợi nhuận lớn. Học cách đánh giá dự án như một VC.</p>
+            <ul class="session-topics">
+              <li><span class="fcheck">&#10003;</span>Đọc whitepaper &amp; documentation</li>
+              <li><span class="fcheck">&#10003;</span>Tokenomics: supply, emission, vesting, utility</li>
+              <li><span class="fcheck">&#10003;</span>Team, investor &amp; roadmap analysis</li>
+              <li><span class="fcheck">&#10003;</span>Narrative waves: AI, RWA, DePIN, memecoin</li>
+            </ul>
+            <div class="session-tools">
+              <span class="tok tok-btc">Research</span>
+              <span class="tok tok-eth">CoinGecko</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Phase 3 -->
+      <div class="curriculum-phase phase-3" id="phase-3">
+        <div class="course-track-header">
+          <div class="phase-level-badge">
+            <span class="pt-tier-label">LEVEL 03 · DEFI &amp; INVESTMENT MASTERY</span>
+          </div>
+          <h2 class="course-track-title">Phase 3 — DeFi, Investment &amp; Mastery</h2>
+          <p class="course-track-desc">DeFi strategies, airdrop farming, portfolio management và xây dựng sự nghiệp Web3. Bao gồm toàn bộ nội dung Level 01 &amp; 02.</p>
+        </div>
+        <div class="curriculum-grid">
+
+          <div class="session-card">
+            <span class="session-level-tag">L03</span>
+            <div class="session-num">Buổi 09</div>
+            <h3 class="session-title">DeFi &amp; Yield Strategies</h3>
+            <p class="session-desc">Dùng crypto làm việc cho bạn — lending, staking và yield farming an toàn.</p>
+            <ul class="session-topics">
+              <li><span class="fcheck">&#10003;</span>DEX, lending (Aave, Compound), staking</li>
+              <li><span class="fcheck">&#10003;</span>LP farming &amp; impermanent loss</li>
+              <li><span class="fcheck">&#10003;</span>Auto-compounders (Yearn, Beefy)</li>
+              <li><span class="fcheck">&#10003;</span>Đánh giá APY thật vs APY ảo</li>
+            </ul>
+            <div class="session-tools">
+              <span class="tok tok-def">Aave</span>
+              <span class="tok tok-dex">Uniswap</span>
+            </div>
+          </div>
+
+          <div class="session-card">
+            <span class="session-level-tag">L03</span>
+            <div class="session-num">Buổi 10</div>
+            <h3 class="session-title">NFT, Airdrop Hunting &amp; Web3</h3>
+            <p class="session-desc">Kiếm cơ hội từ hệ sinh thái mới — NFT, airdrop và danh tính Web3.</p>
+            <ul class="session-topics">
+              <li><span class="fcheck">&#10003;</span>NFT marketplace: OpenSea, Blur, Magic Eden</li>
+              <li><span class="fcheck">&#10003;</span>Airdrop farming: Layer 2, testnet strategies</li>
+              <li><span class="fcheck">&#10003;</span>Sybil protection &amp; multi-wallet hygiene</li>
+              <li><span class="fcheck">&#10003;</span>Web3 identity: ENS, Lens, Farcaster</li>
+            </ul>
+            <div class="session-tools">
+              <span class="tok tok-eth">NFT</span>
+              <span class="tok tok-sol">Airdrop</span>
+            </div>
+          </div>
+
+          <div class="session-card">
+            <span class="session-level-tag">L03</span>
+            <div class="session-num">Buổi 11</div>
+            <h3 class="session-title">Portfolio Management &amp; Thuế</h3>
+            <p class="session-desc">Đầu tư dài hạn có hệ thống — allocation, rebalancing và tracking.</p>
+            <ul class="session-topics">
+              <li><span class="fcheck">&#10003;</span>Allocation theo chu kỳ: bull, bear, side</li>
+              <li><span class="fcheck">&#10003;</span>Rebalancing strategy &amp; DCA vs lump sum</li>
+              <li><span class="fcheck">&#10003;</span>Portfolio tracker: CoinStats, Zerion, Debank</li>
+              <li><span class="fcheck">&#10003;</span>Lưu hồ sơ thuế crypto tại Việt Nam</li>
+            </ul>
+            <div class="session-tools">
+              <span class="tok tok-btc">Portfolio</span>
+              <span class="tok tok-def">Debank</span>
+            </div>
+          </div>
+
+          <div class="session-card">
+            <span class="session-level-tag">L03</span>
+            <div class="session-num">Buổi 12</div>
+            <h3 class="session-title">Xây dựng nghề nghiệp Web3</h3>
+            <p class="session-desc">Biến crypto thành con đường sự nghiệp — trader, analyst, builder hay content creator.</p>
+            <ul class="session-topics">
+              <li><span class="fcheck">&#10003;</span>Các con đường: trader, analyst, builder, creator</li>
+              <li><span class="fcheck">&#10003;</span>Xây thương hiệu cá nhân crypto trên X &amp; YouTube</li>
+              <li><span class="fcheck">&#10003;</span>Networking: sự kiện, DAO, cộng đồng</li>
+              <li><span class="fcheck">&#10003;</span>Tránh rug, scam &amp; giữ tâm trí lâu dài</li>
+            </ul>
+            <div class="session-tools">
+              <span class="tok tok-eth">Career</span>
+              <span class="tok tok-sol">Web3</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section" style="padding: 80px 0;">
+    <div class="container" style="text-align: center;">
+      <h2 class="course-track-title" style="margin-bottom: 16px;">Ready to start?</h2>
+      <p class="course-track-desc" style="margin-bottom: 32px;">Đăng ký ngay để bắt đầu hành trình làm chủ crypto &amp; Web3 một cách bài bản.</p>
+      <a href="contact.html" class="btn-primary" style="display:inline-block;max-width:320px;">Đăng ký ngay &rarr;</a>
+      <p style="margin-top: 28px; font-size: 13px; color: var(--text-secondary); max-width: 640px; margin-left:auto; margin-right:auto;">
+        <em>Disclaimer: Nội dung khóa học mang tính giáo dục, không phải lời khuyên đầu tư. Crypto biến động mạnh &amp; có rủi ro mất vốn. Luôn tự nghiên cứu (DYOR) và chỉ đầu tư số tiền bạn sẵn sàng mất.</em>
+      </p>
+    </div>
+  </section>
+
+  <!-- GUARANTEE -->
+  <section class="section" style="padding: 60px 0;">
+    <div class="container">
+      <div class="guarantee-bar-v2">
+        <div>
+          <strong>Ironclad Quality Guarantee</strong>
+          <p>I am confident in the value of these frameworks. If you put in the work and aren't satisfied after your first 7 days, I will issue a full refund — no questions asked.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <div class="logo-mark">K</div>
+            <span>KY<span class="logo-dot">.</span></span>
+          </div>
+          <p>AI Editor & Creative Strategist — Turning technology into art, and value into influence.</p>
+          <div class="footer-socials">
+            <a href="#" aria-label="TikTok" class="fsoc">TT</a>
+            <a href="#" aria-label="Instagram" class="fsoc">IG</a>
+            <a href="#" aria-label="Facebook" class="fsoc">FB</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="about.html#services">Services</a></li>
+            <li><a href="about.html#work">Portfolio</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="about.html#services">AI Content Production</a></li>
+            <li><a href="about.html#services">Automation Workflow</a></li>
+            <li><a href="about.html#services">Brand Building</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:+84000000000">Zalo / Phone</a></li>
+            <li><a href="mailto:hello@ky.studio">hello@ky.studio</a></li>
+            <li><a href="contact.html">Send a Message</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="footerYear">2025</span> KY Studio. All rights reserved.</p>
+        <p>Built with AI</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll to top">&uarr;</button>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

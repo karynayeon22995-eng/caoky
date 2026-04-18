@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | KY — AI Editor & Creative Strategist</title>
+  <meta name="description" content="Get in touch for project requests, consulting, or course enrollments." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Contact | KY — AI Editor & Creative Strategist" />
+  <meta property="og:description" content="Get in touch for project requests, consulting, or course enrollments." />
+  <meta property="og:type" content="website" />
+
+  <!-- Preload critical fonts -->
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/misans@4.0.0/lib/Normal/MiSans-Bold.woff2" as="font" type="font/woff2" crossorigin />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="page-contact">
+
+  <!-- Preloader -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader-logo">K</div>
+  </div>
+
+  <!-- Skip Navigation -->
+  <a href="#contactForm" class="skip-nav">Skip to contact form</a>
+
+  <!-- Page Transition Overlay -->
+  <div class="page-transition-overlay" id="pageTransition" aria-hidden="true"></div>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="logos/cky-logo.webp" alt="CKY" class="nav-logo-img" />
+      </a>
+      <div class="nav-notif" id="navNotif"></div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="courses.html" class="nav-link">Courses</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <header class="page-header">
+    <div class="container">
+      <div class="section-label">Contact</div>
+      <h1 class="page-title">Let's work<br><em>together</em></h1>
+      <p class="page-desc">Ready for your next big project or want to learn AI? Send me a message and let's discuss how we can make it happen.</p>
+    </div>
+  </header>
+
+  <!-- CONTACT SPLIT PANEL -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-split">
+
+        <!-- Dark Left Panel -->
+        <div class="contact-dark-panel">
+          <div class="cdp-inner">
+            <div class="cdp-logo">
+              <div class="logo-mark">K</div>
+              <span>KY<span class="logo-dot">.</span></span>
+            </div>
+            <div class="cdp-title">Let's connect</div>
+            <p class="cdp-sub">I'm always open to interesting projects, partnerships, and creative conversations. Reach out through any channel.</p>
+
+            <div class="cdp-item">
+              <div>
+                <div class="cdp-item-label">Zalo / Direct Line</div>
+                <div class="cdp-item-value"><a href="tel:+84000000000">+84 000 000 000</a></div>
+              </div>
+            </div>
+
+            <div class="cdp-item">
+              <div>
+                <div class="cdp-item-label">Email Address</div>
+                <div class="cdp-item-value"><a href="mailto:hello@ky.studio">hello@ky.studio</a></div>
+              </div>
+            </div>
+
+            <div class="cdp-item">
+              <div>
+                <div class="cdp-item-label">Response Time</div>
+                <div class="cdp-item-value">Within 24 hours</div>
+              </div>
+            </div>
+
+            <div class="cdp-item">
+              <div>
+                <div class="cdp-item-label">Location</div>
+                <div class="cdp-item-value">Vietnam · Remote-friendly</div>
+              </div>
+            </div>
+
+            <div class="cdp-social-row">
+              <a href="#">TikTok</a>
+              <a href="#">Instagram</a>
+              <a href="#">Facebook</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form Right Panel -->
+        <div class="contact-form-panel">
+          <form class="contact-form" id="contactForm">
+            <h3 style="font-size: 22px; font-weight: 800; margin-bottom: 6px;">Send a Message</h3>
+            <p style="font-size: 14px; color: var(--text-secondary); margin-bottom: 28px;">Fill in the form and I'll get back to you within 24 hours.</p>
+            <div class="form-row two-col">
+              <div class="form-field">
+                <label for="formName">Your Name</label>
+                <input type="text" id="formName" placeholder="John Doe" required />
+              </div>
+              <div class="form-field">
+                <label for="formEmail">Email Address</label>
+                <input type="email" id="formEmail" placeholder="you@email.com" required />
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="formService">I'm interested in</label>
+              <select id="formService">
+                <option value="">— Select a category —</option>
+                <option value="ai-content">Service: AI Content Production</option>
+                <option value="video-edit">Service: Video & Photo Editing</option>
+                <option value="automation">Service: Automation Workflow</option>
+                <option value="branding">Service: Brand Building</option>
+                <option value="edit-l1">Editing Course: L01 Fundamentals</option>
+                <option value="edit-l2">Editing Course: L02 Advanced</option>
+                <option value="edit-l3">Editing Course: L03 Mastery</option>
+                <option value="ai-l1">AI Course: L01 Basics</option>
+                <option value="ai-l2">AI Course: L02 Advanced</option>
+                <option value="ai-l3">AI Course: L03 Mastery</option>
+                <option value="crypto-l1">Crypto Course: L01 Basics</option>
+                <option value="crypto-l2">Crypto Course: L02 Trading</option>
+                <option value="crypto-l3">Crypto Course: L03 Mastery</option>
+                <option value="consulting">Creative Consulting / Other</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="formMessage">Message Details</label>
+              <textarea id="formMessage" rows="5" placeholder="Tell me about your project needs, budget, or any questions you have..."></textarea>
+            </div>
+            <button type="submit" class="btn-submit" id="formSubmitBtn" style="margin-top: 8px;">
+              <span>Send Message</span>
+              <span class="arrow-icon">→</span>
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <div class="logo-mark">K</div>
+            <span>KY<span class="logo-dot">.</span></span>
+          </div>
+          <p>AI Editor & Creative Strategist — Turning technology into art, and value into influence.</p>
+          <div class="footer-socials">
+            <a href="#" aria-label="TikTok" class="fsoc">TT</a>
+            <a href="#" aria-label="Instagram" class="fsoc">IG</a>
+            <a href="#" aria-label="Facebook" class="fsoc">FB</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="about.html#services">Services</a></li>
+            <li><a href="about.html#work">Portfolio</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="about.html#services">AI Content Production</a></li>
+            <li><a href="about.html#services">Automation Workflow</a></li>
+            <li><a href="about.html#services">Brand Building</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:+84000000000">Zalo / Phone</a></li>
+            <li><a href="mailto:hello@ky.studio">hello@ky.studio</a></li>
+            <li><a href="contact.html">Send a Message</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="footerYear">2025</span> KY Studio. All rights reserved.</p>
+        <p>Built with AI</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top -->
+  <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll to top">&uarr;</button>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

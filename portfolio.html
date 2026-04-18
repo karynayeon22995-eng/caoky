@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio | KY — AI Editor & Creative Strategist</title>
+  <meta name="description" content="Browse featured work, including AI content generation, cinematic video editing, brand identity, and n8n automations." />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Portfolio | KY — AI Editor & Creative Strategist" />
+  <meta property="og:description" content="Browse featured work, including AI content generation, cinematic video editing, brand identity, and n8n automations." />
+  <meta property="og:type" content="website" />
+
+  <!-- Preload critical fonts -->
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/misans@4.0.0/lib/Normal/MiSans-Bold.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="page-portfolio">
+  <!-- Preloader -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader-logo">K</div>
+  </div>
+
+  <!-- Skip Navigation -->
+  <a href="#" class="skip-nav">Skip to main content</a>
+
+  <!-- Page Transition Overlay -->
+  <div class="page-transition-overlay" id="pageTransition" aria-hidden="true"></div>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-mark">K</div>
+        <span class="logo-wordmark">KY<span class="logo-dot">.</span></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="courses.html" class="nav-link">Courses</a></li>
+        <li><a href="portfolio.html" class="nav-link nav-active">Work</a></li>
+        <li><a href="contact.html" class="btn-nav-cta">Get in Touch</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <header class="page-header">
+    <div class="container">
+      <div class="section-label">Portfolio</div>
+      <h1 class="page-title">Selected <em>Work</em></h1>
+      <p class="page-desc">Explore a selection of recent projects demonstrating a blend of AI capabilities, creative styling, and technical execution.</p>
+    </div>
+  </header>
+
+  <!-- PORTFOLIO GRID -->
+  <section class="section">
+    <div class="container">
+      <div class="filter-bar filter-bar-centered" style="justify-content: center; margin-bottom: 48px;">
+        <button class="filter-btn active" data-filter="all">All Work</button>
+        <button class="filter-btn" data-filter="ai">AI Content</button>
+        <button class="filter-btn" data-filter="video">Video</button>
+        <button class="filter-btn" data-filter="automation">Automation</button>
+        <button class="filter-btn" data-filter="branding">Branding</button>
+      </div>
+
+      <div class="portfolio-grid">
+        <!-- 1 — FEATURED (spans 2 cols) -->
+        <div class="portfolio-card pcard-featured" data-category="ai">
+          <div class="pcard-thumb" style="background: linear-gradient(135deg, #0a1a4a, #0d2060);"><div class="pcard-overlay"><span>View Project</span></div></div>
+          <div class="pcard-body">
+            <span class="pcard-cat">AI Content</span>
+            <h4>AI Visual Campaign</h4>
+            <p>AI-generated 12-image creative suite for a high-end lifestyle brand, maintaining strict character and lighting consistency using Midjourney and ControlNet.</p>
+          </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="portfolio-card" data-category="video">
+          <div class="pcard-thumb" style="background: linear-gradient(135deg, #051535, #0a2055);"><div class="pcard-overlay"><span>View Project</span></div></div>
+          <div class="pcard-body">
+            <span class="pcard-cat">Video Edit</span>
+            <h4>Cinematic Brand Film</h4>
+            <p>Premium 60-second cinematic brand film from rough cut through advanced DaVinci Resolve color grading and After Effects compositing.</p>
+          </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="portfolio-card" data-category="automation">
+          <div class="pcard-thumb" style="background: linear-gradient(135deg, #071428, #0f2448);"><div class="pcard-overlay"><span>View Project</span></div></div>
+          <div class="pcard-body">
+            <span class="pcard-cat">Automation</span>
+            <h4>AI Content Pipeline</h4>
+            <p>Complex n8n workflow fetching trending topics, generating scripts via Claude, synthesizing voice via ElevenLabs, and triggering video rendering automatically.</p>
+          </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="portfolio-card" data-category="branding">
+          <div class="pcard-thumb" style="background: linear-gradient(135deg, #0a1628, #0f2040);"><div class="pcard-overlay"><span>View Project</span></div></div>
+          <div class="pcard-body">
+            <span class="pcard-cat">Branding</span>
+            <h4>Full Brand Identity</h4>
+            <p>Complete visual identity from logo to brand guidelines, delivering a consistent and engaging aesthetic system for an AI SaaS startup.</p>
+          </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="portfolio-card" data-category="ai">
+          <div class="pcard-thumb" style="background: linear-gradient(135deg, #061030, #0d2050);"><div class="pcard-overlay"><span>View Project</span></div></div>
+          <div class="pcard-body">
+            <span class="pcard-cat">AI Video</span>
+            <h4>AI Short Film</h4>
+            <p>Experimental short film generated with Runway Gen-2 and Pika Labs, focusing on narrative continuity and cinematic camera movements.</p>
+          </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="portfolio-card" data-category="video">
+          <div class="pcard-thumb" style="background: linear-gradient(135deg, #040d25, #08183a);"><div class="pcard-overlay"><span>View Project</span></div></div>
+          <div class="pcard-body">
+            <span class="pcard-cat">Social Media</span>
+            <h4>Viral Content Series</h4>
+            <p>Hook-driven short form video series optimized for TikTok and Instagram Reels, achieving millions of organic views through superior editing.</p>
+          </div>
+        </div>
+
+        <!-- 7 -->
+        <div class="portfolio-card" data-category="automation">
+          <div class="pcard-thumb" style="background: linear-gradient(135deg, #071020, #0e1e3a);"><div class="pcard-overlay"><span>View Project</span></div></div>
+          <div class="pcard-body">
+            <span class="pcard-cat">Automation</span>
+            <h4>CRM Client Onboarding</h4>
+            <p>No-code automated client onboarding system linking Typeform, Slack, Google Drive, and Monday.com, saving the client 15 manual hours per week.</p>
+          </div>
+        </div>
+
+        <!-- 8 -->
+        <div class="portfolio-card" data-category="branding">
+          <div class="pcard-thumb" style="background: linear-gradient(135deg, #050f2a, #0c1e40);"><div class="pcard-overlay"><span>View Project</span></div></div>
+          <div class="pcard-body">
+            <span class="pcard-cat">Branding</span>
+            <h4>Social Aesthetic Overhaul</h4>
+            <p>Total visual refresh for a lifestyle influencer — new color grading presets, typography templates, and content pillars for grid harmony.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA STRIP -->
+  <section class="section bg-surface" style="padding: 96px 0; text-align: center;">
+    <div class="container">
+      <div class="section-label" style="margin-bottom: 12px;">Start a Project</div>
+      <h2 style="font-size: clamp(26px, 4vw, 42px); font-weight: 800; margin-bottom: 36px;">Like what you see?</h2>
+      <a href="contact.html" class="btn-primary" style="font-size: 15px; padding: 13px 28px;">Let's build your project</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <div class="logo-mark">K</div>
+            <span>KY<span class="logo-dot">.</span></span>
+          </div>
+          <p>AI Editor & Creative Strategist — Turning technology into art, and value into influence.</p>
+          <div class="footer-socials">
+            <a href="#" aria-label="TikTok" class="fsoc">TT</a>
+            <a href="#" aria-label="Instagram" class="fsoc">IG</a>
+            <a href="#" aria-label="Facebook" class="fsoc">FB</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html">AI Content Production</a></li>
+            <li><a href="services.html">Automation Workflow</a></li>
+            <li><a href="services.html">Creative Consulting</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:+84000000000">Zalo / Phone</a></li>
+            <li><a href="mailto:hello@ky.studio">hello@ky.studio</a></li>
+            <li><a href="contact.html">Send a Message</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="footerYear">2025</span> KY Studio. All rights reserved.</p>
+        <p>Built with AI</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top -->
+  <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll to top">&uarr;</button>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
