@@ -1741,6 +1741,41 @@ h1, h2, h3, h4 {
   padding-top: 0;
 }
 
+/* n8n single-tier flat pricing card (3-session bootcamp) */
+.n8n-single-grid {
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.n8n-flat-card .pt-price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+.n8n-flat-card .pt-price {
+  font-family: 'MiSans', sans-serif;
+  font-size: 38px;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.02em;
+}
+.n8n-flat-card .pt-price-note {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+.n8n-feats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+@media (max-width: 768px) {
+  .n8n-feats-grid { grid-template-columns: 1fr; }
+  .n8n-flat-card .pt-price { font-size: 30px; }
+}
+
 .session-num {
   font-size: 11px;
   font-weight: 700;
