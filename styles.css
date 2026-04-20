@@ -74,18 +74,30 @@
   --max-w: 1160px;
   --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-md: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Typography — Plus Jakarta Sans (display) + DM Sans (body), full Vietnamese support */
+  --font-display: 'Plus Jakarta Sans', 'MiSans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body:    'DM Sans', 'MiSans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --tracking-display: -0.028em;
+  --tracking-tight: -0.015em;
+  --tracking-label: 0.08em;
+  --leading-display: 1.05;
+  --leading-heading: 1.18;
+  --leading-body: 1.6;
 }
 
 /* ============ RESET & BASE ============ */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; font-size: 16px; }
 body {
-  font-family: 'MiSans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: var(--font-body);
   background: var(--bg);
   color: var(--text-primary);
-  line-height: 1.6;
+  line-height: var(--leading-body);
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "ss01", "cv11";
 }
 a { color: inherit; text-decoration: none; transition: var(--transition); }
 img { max-width: 100%; display: block; }
@@ -97,19 +109,22 @@ input, select, textarea { font-family: inherit; }
 ::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: var(--radius-full); }
 
-/* ============ TYPOGRAPHY (from styleguide scale) ============ */
+/* ============ TYPOGRAPHY (premium scale) ============ */
 h1, h2, h3, h4 {
-  font-family: 'MiSans', sans-serif;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
+  font-family: var(--font-display);
+  line-height: var(--leading-heading);
+  letter-spacing: var(--tracking-display);
   color: var(--text-primary);
+  font-weight: 700;
 }
 .section-title {
-  font-size: clamp(28px, 4vw, 42px);
+  font-size: clamp(28px, 4vw, 44px);
   font-weight: 700;
+  letter-spacing: var(--tracking-display);
+  line-height: var(--leading-display);
   margin-bottom: var(--space-4);
 }
-.section-title em { color: var(--primary); font-style: normal; }
+.section-title em { color: var(--primary); font-style: normal; font-weight: 700; }
 .section-subtitle {
   font-size: 16px;
   color: var(--text-secondary);
@@ -124,9 +139,10 @@ h1, h2, h3, h4 {
   margin-bottom: var(--space-5);
 }
 .section-label {
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: var(--tracking-label);
   text-transform: uppercase;
   color: var(--primary);
   margin-bottom: var(--space-3);
@@ -3297,3 +3313,151 @@ h1, h2, h3, h4 {
   0%, 100% { transform: scale(1); opacity: 1; }
   50% { transform: scale(1.15); opacity: 0.7; }
 }
+
+/* ============================================
+   REDESIGN ADDITIONS (about + course polish)
+   ============================================ */
+
+/* ---- About page: inline 3-stat row (replaces 2x2 grid) ---- */
+.about-stats-inline {
+  display: flex;
+  gap: 48px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  padding-top: 32px;
+  border-top: 1px solid var(--border);
+}
+.asi-item { display: flex; flex-direction: column; gap: 6px; }
+.asi-num {
+  font-family: var(--font-display);
+  font-size: 34px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: var(--tracking-display);
+  line-height: 1;
+}
+.asi-num .sfx { color: var(--primary); }
+.asi-lbl {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  letter-spacing: 0.02em;
+}
+@media (max-width: 640px) { .about-stats-inline { gap: 28px; } .asi-num { font-size: 28px; } }
+
+/* ---- About page: toolbelt logo strip ---- */
+.about-toolbelt {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 32px 0;
+  opacity: 0.55;
+  filter: grayscale(0.3);
+  transition: var(--transition-md);
+}
+.about-toolbelt:hover { opacity: 0.9; filter: grayscale(0); }
+.about-toolbelt img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+.about-toolbelt-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+/* ---- Button group utility ---- */
+.btn-group { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 32px; }
+
+/* ---- CTA section utility (replaces inline styles on 3 pages) ---- */
+.cta-section { padding: 96px 0; text-align: center; }
+.cta-heading {
+  font-family: var(--font-display);
+  font-size: clamp(26px, 4vw, 42px);
+  font-weight: 700;
+  letter-spacing: var(--tracking-display);
+  line-height: var(--leading-display);
+  margin-bottom: 28px;
+}
+
+/* ---- Course detail: Phase navigation bar (replaces redundant overview cards) ---- */
+.phase-nav {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  max-width: 960px;
+  margin: 0 auto;
+  background: var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border-strong);
+}
+.phase-nav-item {
+  padding: 24px 20px;
+  background: var(--surface);
+  text-align: center;
+  transition: var(--transition);
+  color: var(--text-primary);
+}
+.phase-nav-item:hover { background: rgba(255,255,255,0.03); }
+.phase-nav-item .pn-label {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  display: block;
+}
+.phase-nav-item .pn-title {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: var(--tracking-tight);
+  margin-bottom: 4px;
+}
+.phase-nav-item .pn-meta { font-size: 12px; color: var(--text-secondary); }
+.phase-nav-item.pn-1 .pn-label { color: rgba(255,255,255,0.7); }
+.phase-nav-item.pn-2 .pn-label { color: var(--sky); }
+.phase-nav-item.pn-3 .pn-label { color: var(--amber); }
+.phase-nav-item.pn-2 { background: linear-gradient(135deg, rgba(0,85,255,0.05), var(--surface) 70%); }
+.phase-nav-item.pn-3 { background: linear-gradient(135deg, rgba(245,158,11,0.05), var(--surface) 70%); }
+@media (max-width: 768px) {
+  .phase-nav { grid-template-columns: 1fr; }
+}
+
+/* ---- Ease down font-weight of heavy headings (from 800 → 700) ---- */
+.page-title { font-weight: 700; letter-spacing: var(--tracking-display); line-height: var(--leading-display); color: var(--text-primary); }
+.course-track-title { font-weight: 700; letter-spacing: var(--tracking-display); }
+.pt-name { font-weight: 700; letter-spacing: var(--tracking-tight); }
+.session-title { font-weight: 700; letter-spacing: var(--tracking-tight); }
+.service-card-v2 .svc-body h4 { font-weight: 700; letter-spacing: var(--tracking-tight); }
+
+/* ---- Tokens for crypto course (moved from inline <style> in course-crypto.html) ---- */
+.tok {
+  display: inline-flex;
+  align-items: center;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  padding: 4px 8px;
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 6px;
+  color: rgba(255,255,255,0.65);
+  background: rgba(255,255,255,0.03);
+  text-transform: uppercase;
+}
+.tok-btc { color: #f7931a; border-color: rgba(247,147,26,0.35); }
+.tok-eth { color: #8a92b2; border-color: rgba(138,146,178,0.35); }
+.tok-sol { color: #9945ff; border-color: rgba(153,69,255,0.35); }
+.tok-bnb { color: #f3ba2f; border-color: rgba(243,186,47,0.35); }
+.tok-tv  { color: #2962ff; border-color: rgba(41,98,255,0.35); }
+.tok-dex { color: #ff007a; border-color: rgba(255,0,122,0.35); }
+.tok-def { color: #2ebac6; border-color: rgba(46,186,198,0.35); }

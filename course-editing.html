@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,7 +8,9 @@
   <meta property="og:title" content="Video Editing Course | KY" />
   <meta property="og:description" content="Master video editing in 14 sessions — from your first cut to freelance business." />
   <meta property="og:type" content="website" />
-  <link rel="preload" href="https://cdn.jsdelivr.net/npm/misans@4.0.0/lib/Normal/MiSans-Bold.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body class="page-course-editing">
@@ -16,7 +18,7 @@
   <div class="preloader" id="preloader" aria-hidden="true">
     <div class="preloader-logo">K</div>
   </div>
-  <a href="#" class="skip-nav">Skip to main content</a>
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
   <div class="page-transition-overlay" id="pageTransition" aria-hidden="true"></div>
 
   <!-- NAVIGATION -->
@@ -46,84 +48,26 @@
     </div>
   </header>
 
-  <!-- OVERVIEW: 3 Phases -->
-  <section class="section">
+  <!-- PHASE NAVIGATION BAR -->
+  <section class="section" style="padding: 60px 0;">
     <div class="container">
-      <div class="pricing-grid">
-
-        <div class="pt-card">
-          <div class="pt-header">
-            <div class="pt-tier-row">
-              <span class="pt-tier-label">Level 01</span>
-              <span class="pt-tier-pill pill-neutral">Phase 1</span>
-            </div>
-            <div class="pt-name">Edit Fundamentals</div>
-            <div class="pt-caption">Nền Tảng · Buổi 1 — 5</div>
-          </div>
-          <div class="pt-features">
-            <div class="pt-feat"><span class="fcheck">&#10003;</span><span>Thể loại video & workspace</span></div>
-            <div class="pt-feat"><span class="fcheck">&#10003;</span><span>Cắt ghép & nhịp điệu</span></div>
-            <div class="pt-feat"><span class="fcheck">&#10003;</span><span>Transitions & visual flow</span></div>
-            <div class="pt-feat"><span class="fcheck">&#10003;</span><span>Chỉnh sửa âm thanh</span></div>
-            <div class="pt-feat"><span class="fcheck">&#10003;</span><span>Color correction cơ bản</span></div>
-            <div class="session-tools">
-              <img src="logos/premiere.svg" alt="Premiere" title="Premiere Pro">
-              <img src="logos/capcut.webp" alt="CapCut" title="CapCut">
-              <img src="logos/davinci.svg" alt="DaVinci" title="DaVinci Resolve">
-            </div>
-          </div>
-        </div>
-
-        <div class="pt-card pt-featured">
-          <div class="pt-header">
-            <div class="pt-tier-row">
-              <span class="pt-tier-label">Level 02</span>
-              <span class="pt-tier-pill pill-popular">Phase 2 · Most Popular</span>
-            </div>
-            <div class="pt-name">Advanced Editing</div>
-            <div class="pt-caption">Nâng Cao · Buổi 6 — 10</div>
-          </div>
-          <div class="pt-features">
-            <div class="pt-feat"><span class="fcheck">&#10003;</span><span>All Level 01 content included</span></div>
-            <div class="pt-feat"><span class="fcheck">&#10003;</span><span>Cinematic color grading</span></div>
-            <div class="pt-feat"><span class="fcheck">&#10003;</span><span>Motion graphics & text animation</span></div>
-            <div class="pt-feat"><span class="fcheck">&#10003;</span><span>VFX & compositing</span></div>
-            <div class="pt-feat"><span class="fcheck">&#10003;</span><span>Storytelling & narrative editing</span></div>
-            <div class="pt-feat"><span class="fcheck">&#10003;</span><span>Social media production</span></div>
-            <div class="session-tools">
-              <img src="logos/aftereffects.svg" alt="After Effects" title="After Effects">
-              <img src="logos/davinci.svg" alt="DaVinci" title="DaVinci Resolve">
-              <img src="logos/topaz.webp" alt="Topaz" title="Topaz">
-              <img src="logos/veed.svg" alt="VEED" title="VEED">
-            </div>
-          </div>
-        </div>
-
-        <div class="pt-card pt-premium">
-          <div class="pt-header">
-            <div class="pt-tier-row">
-              <span class="pt-tier-label">Level 03</span>
-              <span class="pt-tier-pill pill-premium">Phase 3 · Premium</span>
-            </div>
-            <div class="pt-name">Edit Mastery</div>
-            <div class="pt-caption">Mastery &amp; Business · Buổi 11 — 14</div>
-          </div>
-          <div class="pt-features">
-            <div class="pt-feat"><span class="fcheck">&#10003;</span><span>All Level 01 &amp; 02 content included</span></div>
-            <div class="pt-feat"><span class="fcheck">&#10003;</span><span>Commercial workflows</span></div>
-            <div class="pt-feat"><span class="fcheck">&#10003;</span><span>Templates & automation</span></div>
-            <div class="pt-feat"><span class="fcheck">&#10003;</span><span>Portfolio & delivery</span></div>
-            <div class="pt-feat"><span class="fcheck">&#10003;</span><span>Freelance editing business</span></div>
-            <div class="session-tools">
-              <img src="logos/premiere.svg" alt="Premiere" title="Premiere Pro">
-              <img src="logos/aftereffects.svg" alt="After Effects" title="After Effects">
-              <img src="logos/figma.webp" alt="Figma" title="Figma">
-              <img src="logos/photoshop.svg" alt="Photoshop" title="Photoshop">
-            </div>
-          </div>
-        </div>
-
-      </div>
+      <nav class="phase-nav" aria-label="Course phases">
+        <a href="#phase-1" class="phase-nav-item pn-1">
+          <span class="pn-label">Level 01</span>
+          <div class="pn-title">Nền Tảng</div>
+          <div class="pn-meta">Buổi 1 — 5 · 5 buổi</div>
+        </a>
+        <a href="#phase-2" class="phase-nav-item pn-2">
+          <span class="pn-label">Level 02</span>
+          <div class="pn-title">Nâng Cao</div>
+          <div class="pn-meta">Buổi 6 — 10 · 5 buổi</div>
+        </a>
+        <a href="#phase-3" class="phase-nav-item pn-3">
+          <span class="pn-label">Level 03</span>
+          <div class="pn-title">Mastery &amp; Business</div>
+          <div class="pn-meta">Buổi 11 — 14 · 4 buổi</div>
+        </a>
+      </nav>
     </div>
   </section>
 
@@ -487,8 +431,8 @@
 
   <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll to top">&uarr;</button>
 
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
-  <script src="main.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <script defer src="main.js"></script>
 </body>
 </html>
