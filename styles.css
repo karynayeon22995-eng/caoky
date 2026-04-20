@@ -1319,23 +1319,38 @@ h1, h2, h3, h4 {
 }
 .footer-socials { display: flex; gap: var(--space-2); }
 .fsoc {
-  width: 34px; height: 34px;
+  width: 36px; height: 36px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 11px;
-  font-weight: 700;
   background: var(--bg);
   border: 1.5px solid var(--border);
   border-radius: var(--radius-md);
   color: var(--text-secondary);
   transition: var(--transition);
+  overflow: hidden;
+}
+.fsoc img {
+  width: 18px;
+  height: 18px;
+  filter: brightness(0) invert(1);
+  opacity: 0.65;
+  transition: var(--transition);
 }
 .fsoc:hover {
   background: var(--primary);
   border-color: var(--primary);
-  color: #fff;
 }
+.fsoc:hover img { opacity: 1; }
+.cdp-social-row a img {
+  width: 16px;
+  height: 16px;
+  filter: brightness(0) invert(1);
+  opacity: 0.75;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+.cdp-social-row a:hover img { opacity: 1; }
 .footer-col h4 {
   font-size: 13px;
   font-weight: 700;
