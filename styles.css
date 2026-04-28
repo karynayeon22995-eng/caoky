@@ -2939,7 +2939,8 @@ h1, h2, h3, h4 {
   column-gap: 12px;
   align-items: start;
 }
-.courses-compare-grid .ccg-header { padding-bottom: 24px; }
+.courses-compare-grid .ccg-title { padding-bottom: 8px; }
+.courses-compare-grid .ccg-desc { padding-bottom: 24px; }
 .courses-compare-grid .ccg-btn {
   padding-top: 20px;
   text-align: center;
@@ -2955,16 +2956,20 @@ h1, h2, h3, h4 {
     max-width: 480px;
     margin: 0 auto;
   }
-  /* Restore column order: header→card→btn per course on mobile */
-  .courses-compare-grid > :nth-child(1) { order: 1; }
-  .courses-compare-grid > :nth-child(4) { order: 2; }
-  .courses-compare-grid > :nth-child(7) { order: 3; }
-  .courses-compare-grid > :nth-child(2) { order: 4; }
-  .courses-compare-grid > :nth-child(5) { order: 5; }
-  .courses-compare-grid > :nth-child(8) { order: 6; }
-  .courses-compare-grid > :nth-child(3) { order: 7; }
-  .courses-compare-grid > :nth-child(6) { order: 8; }
-  .courses-compare-grid > :nth-child(9) { order: 9; }
+  /* DOM order: 1-3 titles, 4-6 descs, 7-9 cards, 10-12 btns
+     Restore per-course order: title→desc→card→btn on mobile */
+  .courses-compare-grid > :nth-child(1)  { order: 1;  }
+  .courses-compare-grid > :nth-child(4)  { order: 2;  }
+  .courses-compare-grid > :nth-child(7)  { order: 3;  }
+  .courses-compare-grid > :nth-child(10) { order: 4;  }
+  .courses-compare-grid > :nth-child(2)  { order: 5;  }
+  .courses-compare-grid > :nth-child(5)  { order: 6;  }
+  .courses-compare-grid > :nth-child(8)  { order: 7;  }
+  .courses-compare-grid > :nth-child(11) { order: 8;  }
+  .courses-compare-grid > :nth-child(3)  { order: 9;  }
+  .courses-compare-grid > :nth-child(6)  { order: 10; }
+  .courses-compare-grid > :nth-child(9)  { order: 11; }
+  .courses-compare-grid > :nth-child(12) { order: 12; }
 }
 @media (max-width: 600px) {
   .courses-compare-grid { max-width: 100%; }
