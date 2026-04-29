@@ -3516,3 +3516,129 @@ h1, h2, h3, h4 {
 .tok-tv  { color: #2962ff; border-color: rgba(41,98,255,0.35); }
 .tok-dex { color: #ff007a; border-color: rgba(255,0,122,0.35); }
 .tok-def { color: #2ebac6; border-color: rgba(46,186,198,0.35); }
+
+/* ============================================================
+   HERO SIMPLE — Pain-point text hero (index.html)
+   ============================================================ */
+.hero-simple {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 80px;
+  min-height: 100vh;
+  background: var(--surface);
+}
+
+/* Contained text column */
+.hs-wrap {
+  max-width: 680px;
+  position: relative;
+  z-index: 2;
+}
+
+/* ── Pain zone ── */
+.hs-pains-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.28);
+  margin: 0 0 18px;
+}
+
+.hs-pains {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.hs-pains li {
+  font-size: 15px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.38);
+  padding-left: 26px;
+  position: relative;
+  line-height: 1.5;
+}
+
+.hs-pains li em {
+  font-style: normal;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.hs-pains li::before {
+  content: '×';
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: rgba(239, 68, 68, 0.65);
+}
+
+/* ── Transition arrow ── */
+.hs-arrow {
+  font-size: 22px;
+  color: rgba(255, 255, 255, 0.15);
+  margin-bottom: 28px;
+  display: block;
+  line-height: 1;
+}
+
+/* ── Solution headline ── */
+.hs-headline {
+  font-size: clamp(36px, 5vw, 62px);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  color: #fff;
+  margin: 0 0 22px;
+}
+
+.hs-em {
+  background: linear-gradient(120deg, #60a5fa 0%, #a78bfa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Sub description ── */
+.hs-desc {
+  font-size: 17px;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.55);
+  max-width: 500px;
+  margin: 0 0 32px;
+}
+
+/* ── CTA buttons ── */
+.hs-cta {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* Dark-mode overrides so btn-secondary looks right on the dark hero */
+.hero-simple .btn-secondary {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.75);
+}
+.hero-simple .btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--primary);
+  color: #fff;
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .hs-headline { font-size: 32px; }
+  .hs-br { display: none; }
+  .hs-desc { font-size: 15px; }
+  .hs-pains li { font-size: 14px; }
+}

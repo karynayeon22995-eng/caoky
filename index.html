@@ -4,17 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>KY — AI Editor & Creative Strategist | Home</title>
-  <meta name="description" content="Portfolio of KY — AI specialist, multi-platform editor, automation workflow architect, branding & creative strategist." />
+  <meta name="description" content="KY cuts through the AI chaos — teaching you exactly which tools to use, how to use them, and how to build real results in your work." />
 
   <!-- Open Graph -->
   <meta property="og:title" content="KY — AI Editor & Creative Strategist" />
-  <meta property="og:description" content="Bridging AI, visual editing, and automation to build systems that work smarter — and content that looks stunning." />
+  <meta property="og:description" content="The AI market is overwhelming. KY maps the chaos and teaches you what actually works." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="avatar profile.png" />
-
-  <!-- Preload critical fonts -->
-  <link rel="preload" href="https://cdn.jsdelivr.net/npm/misans@4.0.0/lib/Normal/MiSans-Bold.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="preload" href="https://cdn.jsdelivr.net/npm/misans@4.0.0/lib/Normal/MiSans-Heavy.woff2" as="font" type="font/woff2" crossorigin />
 
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -22,12 +17,15 @@
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "name": "KY Studio",
-    "description": "AI Editor & Creative Strategist — specializing in AI content production, video editing, automation workflows, and brand building.",
+    "description": "AI Editor & Creative Strategist — AI courses, video editing, and personal branding.",
     "url": "",
-    "knowsAbout": ["AI Content Production", "Video Editing", "n8n Automation", "Brand Identity", "Creative Strategy"]
+    "knowsAbout": ["AI Content Production", "Video Editing", "Automation", "Brand Building"]
   }
   </script>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -37,7 +35,7 @@
     <div class="preloader-logo"><img src="logos/cky-logo.webp" alt="CKY" /></div>
   </div>
 
-  <!-- Skip Navigation (Accessibility) -->
+  <!-- Skip Navigation -->
   <a href="#hero" class="skip-nav">Skip to main content</a>
 
   <!-- Page Transition Overlay -->
@@ -60,71 +58,47 @@
     </div>
   </nav>
 
-  <!-- HERO SECTION — BRAIN HUB -->
-  <section class="hero hero-chaos" id="hero">
+  <!-- HERO — PAIN POINT -->
+  <section class="hero hero-simple" id="hero">
+    <!-- Background orbs -->
     <div class="hero-orb orb-1" aria-hidden="true"></div>
     <div class="hero-orb orb-2" aria-hidden="true"></div>
     <div class="hero-orb orb-3" aria-hidden="true"></div>
-    <div class="hero-orb orb-4" aria-hidden="true"></div>
 
-    <!-- SVG Lines -->
-    <svg class="brain-lines" id="brainLines" aria-hidden="true">
-      <defs>
-        <linearGradient id="lineGradL" x1="0%" y1="50%" x2="100%" y2="50%">
-          <stop offset="0%" stop-color="#0055ff" stop-opacity="0.2" />
-          <stop offset="100%" stop-color="#60a5fa" />
-        </linearGradient>
-        <linearGradient id="lineGradR" x1="100%" y1="50%" x2="0%" y2="50%">
-          <stop offset="0%" stop-color="#0055ff" stop-opacity="0.2" />
-          <stop offset="100%" stop-color="#60a5fa" />
-        </linearGradient>
-        <filter id="lineGlow">
-          <feGaussianBlur stdDeviation="3" result="blur" />
-          <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
-        </filter>
-      </defs>
-    </svg>
+    <div class="container">
+      <div class="hs-wrap">
 
-    <!-- Left: AI Logos -->
-    <div class="brain-side brain-left" id="brainLeft">
-      <div class="brain-logo" data-side="left"><img src="logos/chatgpt.webp" alt="" class="cl-img" /></div>
-      <div class="brain-logo" data-side="left"><img src="logos/claude.webp" alt="" class="cl-img" /></div>
-      <div class="brain-logo" data-side="left"><img src="logos/gemini.webp" alt="" class="cl-img" /></div>
-      <div class="brain-logo" data-side="left"><img src="logos/midjourney.webp" alt="" class="cl-img" /></div>
-      <div class="brain-logo" data-side="left"><img src="logos/runway.webp" alt="" class="cl-img" /></div>
-      <div class="brain-logo" data-side="left"><img src="logos/sora.webp" alt="" class="cl-img" /></div>
-      <div class="brain-logo" data-side="left"><img src="logos/flux.webp" alt="" class="cl-img" /></div>
-      <div class="brain-logo" data-side="left"><img src="logos/comfyui.webp" alt="" class="cl-img" /></div>
-      <div class="brain-logo" data-side="left"><img src="logos/stable.webp" alt="" class="cl-img" /></div>
-      <div class="brain-logo" data-side="left"><img src="logos/elevenlabs.webp" alt="" class="cl-img" /></div>
-      <div class="brain-logo" data-side="left"><img src="logos/cursor.webp" alt="" class="cl-img" /></div>
-      <div class="brain-logo" data-side="left"><img src="logos/perplexity.webp" alt="" class="cl-img" /></div>
-    </div>
+        <!-- Pain zone -->
+        <div class="hs-pains-block">
+          <p class="hs-pains-label">The AI world right now</p>
+          <ul class="hs-pains" aria-label="Common AI frustrations">
+            <li>Hundreds of new tools drop every single week</li>
+            <li>Nobody can explain which ones actually matter</li>
+            <li>You've watched tutorials — still feel behind</li>
+            <li>Everyone talks AI. Nobody shows you <em>how</em>.</li>
+          </ul>
+        </div>
 
-    <!-- Center: Brain Hub -->
-    <a href="courses.html" class="brain-center" id="brainCenter">
-      <div class="brain-circle" id="brainCircle">
-        <div class="brain-glow"></div>
-        <img src="logos/brain.webp" alt="Brain" class="brain-icon-img" />
+        <!-- Transition arrow -->
+        <div class="hs-arrow" aria-hidden="true">↓</div>
+
+        <!-- Solution headline -->
+        <h1 class="hs-headline">
+          You see the opportunity.<br>
+          <span class="hs-em">You just don't know<br class="hs-br">where to start.</span>
+        </h1>
+
+        <p class="hs-desc">
+          KY maps the chaos — teaching you the exact tools, workflows, and strategies that move the needle in your real work.
+        </p>
+
+        <div class="hs-cta">
+          <a href="courses.html" class="btn-primary">Find Your Path &rarr;</a>
+          <a href="about.html" class="btn-secondary">About KY</a>
+        </div>
+
       </div>
-    </a>
-
-    <!-- Right: Traditional Tool Logos -->
-    <div class="brain-side brain-right" id="brainRight">
-      <div class="brain-logo" data-side="right"><img src="logos/premiere.svg" alt="" class="cl-img" /></div>
-      <div class="brain-logo" data-side="right"><img src="logos/aftereffects.svg" alt="" class="cl-img" /></div>
-      <div class="brain-logo" data-side="right"><img src="logos/photoshop.svg" alt="" class="cl-img" /></div>
-      <div class="brain-logo" data-side="right"><img src="logos/davinci.svg" alt="" class="cl-img" /></div>
-      <div class="brain-logo" data-side="right"><img src="logos/capcut.webp" alt="" class="cl-img" /></div>
-      <div class="brain-logo" data-side="right"><img src="logos/figma.webp" alt="" class="cl-img" /></div>
-      <div class="brain-logo" data-side="right"><img src="logos/n8n.webp" alt="" class="cl-img" /></div>
-      <div class="brain-logo" data-side="right"><img src="logos/make.webp" alt="" class="cl-img" /></div>
-      <div class="brain-logo" data-side="right"><img src="logos/canva.svg" alt="" class="cl-img" /></div>
-      <div class="brain-logo" data-side="right"><img src="logos/notion.webp" alt="" class="cl-img" /></div>
-      <div class="brain-logo" data-side="right"><img src="logos/topaz.webp" alt="" class="cl-img" /></div>
-      <div class="brain-logo" data-side="right"><img src="logos/veed.svg" alt="" class="cl-img" /></div>
     </div>
-
   </section>
 
   <script defer src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
