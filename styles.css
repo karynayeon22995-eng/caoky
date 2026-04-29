@@ -3549,7 +3549,7 @@ h1, h2, h3, h4 {
   font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.25);
+  color: rgba(255, 255, 255, 0.5);
   margin: 0 0 20px;
 }
 
@@ -3564,8 +3564,8 @@ h1, h2, h3, h4 {
 
 .hs-pains li {
   font-size: 15px;
-  font-weight: 400;
-  color: rgba(255, 255, 255, 0.35);
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.62);
   padding-left: 24px;
   position: relative;
   line-height: 1.55;
@@ -3573,7 +3573,7 @@ h1, h2, h3, h4 {
 
 .hs-pains li em {
   font-style: normal;
-  color: rgba(255, 255, 255, 0.52);
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .hs-pains li::before {
@@ -3584,7 +3584,7 @@ h1, h2, h3, h4 {
   font-size: 16px;
   font-weight: 700;
   line-height: 1.45;
-  color: rgba(239, 68, 68, 0.6);
+  color: rgba(239, 68, 68, 0.9);
 }
 
 /* ── Vertical divider ── */
