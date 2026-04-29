@@ -3518,55 +3518,62 @@ h1, h2, h3, h4 {
 .tok-def { color: #2ebac6; border-color: rgba(46,186,198,0.35); }
 
 /* ============================================================
-   HERO SIMPLE — Pain-point text hero (index.html)
+   HERO SIMPLE — Pain-point two-column hero (index.html)
    ============================================================ */
 .hero-simple {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
   padding-top: 80px;
   min-height: 100vh;
   background: var(--surface);
 }
 
-/* Contained text column */
-.hs-wrap {
-  max-width: 680px;
+/* ── Two-column grid ── */
+.hs-grid {
+  display: grid;
+  grid-template-columns: 1fr 1px 1.25fr;
+  gap: 0 56px;
+  align-items: center;
   position: relative;
   z-index: 2;
+  padding: 80px 0;
 }
 
-/* ── Pain zone ── */
+/* ── LEFT — pain zone ── */
+.hs-left {
+  padding-right: 8px;
+}
+
 .hs-pains-label {
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 700;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.28);
-  margin: 0 0 18px;
+  color: rgba(255, 255, 255, 0.25);
+  margin: 0 0 20px;
 }
 
 .hs-pains {
   list-style: none;
   padding: 0;
-  margin: 0 0 36px;
+  margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 11px;
+  gap: 14px;
 }
 
 .hs-pains li {
   font-size: 15px;
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.38);
-  padding-left: 26px;
+  color: rgba(255, 255, 255, 0.35);
+  padding-left: 24px;
   position: relative;
-  line-height: 1.5;
+  line-height: 1.55;
 }
 
 .hs-pains li em {
   font-style: normal;
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.52);
 }
 
 .hs-pains li::before {
@@ -3574,29 +3581,37 @@ h1, h2, h3, h4 {
   position: absolute;
   left: 0;
   top: 0;
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 700;
-  line-height: 1.4;
-  color: rgba(239, 68, 68, 0.65);
+  line-height: 1.45;
+  color: rgba(239, 68, 68, 0.6);
 }
 
-/* ── Transition arrow ── */
-.hs-arrow {
-  font-size: 22px;
-  color: rgba(255, 255, 255, 0.15);
-  margin-bottom: 28px;
-  display: block;
-  line-height: 1;
+/* ── Vertical divider ── */
+.hs-divider-line {
+  width: 1px;
+  align-self: stretch;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(255, 255, 255, 0.12) 20%,
+    rgba(255, 255, 255, 0.12) 80%,
+    transparent 100%
+  );
 }
 
-/* ── Solution headline ── */
+/* ── RIGHT — solution ── */
+.hs-right {
+  padding-left: 8px;
+}
+
 .hs-headline {
-  font-size: clamp(36px, 5vw, 62px);
+  font-size: clamp(34px, 3.8vw, 58px);
   font-weight: 800;
   letter-spacing: -0.03em;
   line-height: 1.1;
   color: #fff;
-  margin: 0 0 22px;
+  margin: 0 0 20px;
 }
 
 .hs-em {
@@ -3606,24 +3621,21 @@ h1, h2, h3, h4 {
   background-clip: text;
 }
 
-/* ── Sub description ── */
 .hs-desc {
-  font-size: 17px;
-  line-height: 1.65;
-  color: rgba(255, 255, 255, 0.55);
-  max-width: 500px;
-  margin: 0 0 32px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0 0 28px;
 }
 
-/* ── CTA buttons ── */
 .hs-cta {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
   flex-wrap: wrap;
 }
 
-/* Dark-mode overrides so btn-secondary looks right on the dark hero */
+/* Dark-mode overrides for btn-secondary on dark hero */
 .hero-simple .btn-secondary {
   background: rgba(255, 255, 255, 0.05);
   border-color: rgba(255, 255, 255, 0.15);
@@ -3635,10 +3647,31 @@ h1, h2, h3, h4 {
   color: #fff;
 }
 
-/* ── Responsive ── */
-@media (max-width: 600px) {
-  .hs-headline { font-size: 32px; }
-  .hs-br { display: none; }
+/* ── Responsive: stack on tablet/mobile ── */
+@media (max-width: 860px) {
+  .hs-grid {
+    grid-template-columns: 1fr;
+    gap: 40px 0;
+    padding: 60px 0;
+  }
+  .hs-divider-line {
+    width: 48px;
+    height: 1px;
+    align-self: auto;
+    background: linear-gradient(
+      to right,
+      transparent 0%,
+      rgba(255, 255, 255, 0.15) 50%,
+      transparent 100%
+    );
+  }
+  .hs-left { padding-right: 0; }
+  .hs-right { padding-left: 0; }
+  .hs-headline { font-size: clamp(32px, 7vw, 48px); }
+}
+
+@media (max-width: 480px) {
+  .hs-headline { font-size: 30px; }
   .hs-desc { font-size: 15px; }
   .hs-pains li { font-size: 14px; }
 }
