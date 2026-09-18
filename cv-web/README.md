@@ -1,6 +1,6 @@
 # Resume — Dương Lê Cao Kỳ
 
-English web resume based on `CV 2024.pdf`, covering work experience through 2025. Dates, contact details, proper names, and education information are preserved from the source.
+English web resume based on `CV 2024.pdf`, updated with details provided by the resume owner. Work experience includes Mekonglink (Editor & Cameraman, September 2025–July 2026). Contact details, proper names, and education information are preserved from the source unless updated by the owner.
 
 - `dist/index.html`: all resume content. Edit the text directly to update it.
 - `dist/styles.css`: layout, colors, and responsive styles.
