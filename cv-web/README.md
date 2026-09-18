@@ -11,11 +11,11 @@ Open `dist/index.html` to view locally. No dependency installation or build step
 
 ## Video portfolio
 
-`dist/portfolio.html` is the English video editing portfolio. It links to the resume and the three channels supplied by the owner: Thanh Cong – TC, Ngô Thiệu Vinh, and onchain.kidz. The owner confirmed video editing as their role across these channels.
+`dist/portfolio.html` is the English video editing portfolio. It opens with "Welcome my portfolio", then presents each channel followed by its selected videos, in this order: Thanh Cong – TC, Ngô Thiệu Vinh, onchain.kidz, and JupiterZone. It also links to the resume. Video editing is the portfolio owner's role.
 
-- `dist/portfolio-data.js`: nine selected public videos, English display titles, original titles, channel, platform, thumbnail, and source URL. Edit this file to replace or reorder videos.
+- `dist/portfolio-data.js`: twelve selected public videos (three per channel), English display titles, original titles, channel, platform, thumbnail, and source URL. Edit this file to replace or reorder videos within each channel.
 - `dist/portfolio-assets/`: thumbnails retrieved from each platform's public video metadata, stored locally to avoid expired image URLs.
-- `dist/portfolio.css` and `dist/portfolio.js`: responsive layout, channel filters, and an accessible video dialog using the official YouTube and TikTok players. Direct source links remain available if playback is restricted.
+- `dist/portfolio.css` and `dist/portfolio.js`: responsive channel sections and an accessible video dialog using the official YouTube and TikTok players. Direct source links remain available if playback is restricted.
 
 The video selection was made from the supplied channels and can be refined by the owner. Public source URLs and channel attribution are preserved. No follower counts or performance claims are used.
 

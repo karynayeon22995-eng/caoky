@@ -1,11 +1,8 @@
 (() => {
   'use strict';
-  const channels = {tc: 'Thanh Cong – TC', vinh: 'Ngô Thiệu Vinh', kidz: 'onchain.kidz'};
-  const grid = document.querySelector('#video-grid');
+  const channels = {tc: 'Thanh Cong – TC', vinh: 'Ngô Thiệu Vinh', kidz: 'onchain.kidz', jupiter: 'JupiterZone'};
   const dialog = document.querySelector('.video-dialog');
   const player = dialog.querySelector('.player-container');
-  const resultCount = document.querySelector('.result-count');
-  const cards = [];
 
   const element = (tag, className, text) => {
     const node = document.createElement(tag);
@@ -14,7 +11,8 @@
     return node;
   };
 
-  portfolioVideos.forEach(video => {
+  portfolioVideos.forEach((video, index) => {
+    const grid = document.querySelector('.video-grid[data-channel="' + video.channel + '"]');
     const card = element('article', 'video-card');
     card.dataset.channel = video.channel;
     card.dataset.platform = video.platform;
@@ -27,7 +25,7 @@
     const image = element('img');
     image.src = video.thumbnail;
     image.alt = '';
-    image.loading = 'lazy';
+    image.loading = index < 3 ? 'eager' : 'lazy';
     image.decoding = 'async';
     image.width = video.platform === 'youtube' ? 960 : 576;
     image.height = video.platform === 'youtube' ? 540 : 1024;
@@ -45,23 +43,7 @@
     link.dataset.videoId = video.id;
     title.append(link);
     card.append(cover, meta, title);
-    cards.push(card);
     grid.append(card);
-  });
-
-  document.querySelector('.filters').hidden = false;
-  resultCount.textContent = portfolioVideos.length + ' videos';
-  document.querySelectorAll('[data-filter]').forEach(button => {
-    button.addEventListener('click', () => {
-      const filter = button.dataset.filter;
-      document.querySelectorAll('[data-filter]').forEach(other => other.setAttribute('aria-pressed', String(other === button)));
-      let count = 0;
-      cards.forEach(card => {
-        card.hidden = filter !== 'all' && card.dataset.channel !== filter;
-        if (!card.hidden) count++;
-      });
-      resultCount.textContent = count + ' videos' + (filter === 'all' ? '' : ' · ' + channels[filter]);
-    });
   });
 
   document.addEventListener('click', event => {

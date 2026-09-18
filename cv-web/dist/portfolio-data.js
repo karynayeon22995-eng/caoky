@@ -1,5 +1,4 @@
 // Selected public videos. Edit these entries to update the portfolio.
-// Channel roles were confirmed by the portfolio owner.
 const portfolioVideos = [
   {
     "channel": "tc",
@@ -90,5 +89,35 @@ const portfolioVideos = [
     "duration": "",
     "url": "https://www.tiktok.com/@onchain.kidz/video/7508377332290276626",
     "thumbnail": "portfolio-assets/7508377332290276626.webp"
+  },
+  {
+    "channel": "jupiter",
+    "platform": "tiktok",
+    "id": "7602553136712043797",
+    "title": "MetaMask or Rabby: choose your wallet",
+    "originalTitle": "Choose your fighter 👌 #Metamask #RabbyWallet",
+    "duration": "",
+    "url": "https://www.tiktok.com/@jupiter.zone/video/7602553136712043797",
+    "thumbnail": "portfolio-assets/7602553136712043797.webp"
+  },
+  {
+    "channel": "jupiter",
+    "platform": "tiktok",
+    "id": "7573507074772978945",
+    "title": "What is x402?",
+    "originalTitle": "x402 là gì vậy các bác? #JupiterZone #x402 #Crypto #CryptoVietNam",
+    "duration": "",
+    "url": "https://www.tiktok.com/@jupiter.zone/video/7573507074772978945",
+    "thumbnail": "portfolio-assets/7573507074772978945.webp"
+  },
+  {
+    "channel": "jupiter",
+    "platform": "tiktok",
+    "id": "7570225607632506119",
+    "title": "Understanding stablecoins",
+    "originalTitle": "Hiểu đúng stablecoin = sống sót trong bear market 😎 #JupiterZone #Stablecoin #CryptoForAll #USDT #Crypto",
+    "duration": "",
+    "url": "https://www.tiktok.com/@jupiter.zone/video/7570225607632506119",
+    "thumbnail": "portfolio-assets/7570225607632506119.webp"
   }
 ];
