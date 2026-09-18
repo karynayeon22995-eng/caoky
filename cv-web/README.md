@@ -1,11 +1,12 @@
-# CV — Dương Lê Cao Kỳ
+# Resume — Dương Lê Cao Kỳ
 
-Bản web dựa trên `CV 2024.pdf`, với nội dung kinh nghiệm đến 2025. Giữ nguyên các mốc thời gian, thông tin liên hệ và học vấn; chỉ chuẩn hóa chính tả, tên phần mềm và cách trình bày.
+English web resume based on `CV 2024.pdf`, covering work experience through 2025. Dates, contact details, proper names, and education information are preserved from the source.
 
-- `dist/index.html`: toàn bộ nội dung CV. Sửa trực tiếp văn bản để cập nhật.
-- `dist/styles.css`: bố cục, màu sắc và giao diện điện thoại.
-- `dist/portrait.webp`: chân dung trích từ PDF gốc.
+- `dist/index.html`: all resume content. Edit the text directly to update it.
+- `dist/styles.css`: layout, colors, and responsive styles.
+- `dist/portrait.webp`: portrait extracted from the original PDF.
+- `dist/logos/`: DaVinci Resolve and CapCut logos supplied by the resume owner.
 
-Mở `dist/index.html` để xem tại máy. Trang không cần cài thư viện hay chạy bước build.
+Open `dist/index.html` to view locally. No dependency installation or build step is required.
 
-Các tài khoản mạng xã hội hiển thị theo CV gốc; chưa gắn liên kết vì PDF không cung cấp URL. Phần học vấn giữ tên như nguồn và cần chủ CV rà soát tên đơn vị chính xác.
+Social media account names are shown as provided in the PDF, without links because no URLs were supplied. Education names are retained from the source for the owner to review.

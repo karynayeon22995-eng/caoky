@@ -70,8 +70,7 @@ h3{font-size:17px;font-weight:600;line-height:1.5;letter-spacing:-.015em;margin:
 .tool-icon{flex-shrink:0;width:30px;height:32px;display:grid;place-items:center;background:#182046;border:1px solid #6867af;color:#c2baff;font-weight:600;font-size:15px;border-radius:5px;line-height:1}
 .photoshop{background:#082a42;color:#69c7f9;border-color:#368ab6}
 .audition{background:#073b3a;color:#7ee8d0;border-color:#398d7a}
-.davinci{background:#e4ecef;color:#284851;border-color:#cad7dd}
-.capcut{background:#192b30;color:#fff;border-color:#192b30}
+.tool-icon-image{width:32px;height:32px;display:block;object-fit:contain;background:transparent;border:0;border-radius:0}
 .skill-notes{display:grid;grid-template-columns:1.5fr 1fr;gap:32px;margin-top:27px}
 .skill-notes h3{font-size:14px}
 .skill-notes p{font-size:14px;line-height:1.85;color:var(--muted);margin:7px 0 0}
