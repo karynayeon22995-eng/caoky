@@ -40,14 +40,12 @@ a:focus-visible{outline:3px solid #3bafb9;outline-offset:6px;border-radius:3px}
 .eyebrow{display:flex;align-items:center;gap:12px;font-size:12px;letter-spacing:.14em;color:var(--teal);font-weight:600;margin-bottom:23px}
 .short-rule{width:29px;height:2px;background:var(--teal)}
 h1{font-size:clamp(44px,4.6vw,64px);line-height:1.19;letter-spacing:-.055em;font-weight:800;margin:0 0 16px}
-.name-period{color:var(--teal)}
 .role{font-size:15px;letter-spacing:.22em;font-weight:600;color:var(--teal)}
 .intro-line{font-size:18px;line-height:1.65;color:var(--muted);margin:23px 0 22px}
 .specialties{display:flex;gap:8px;flex-wrap:wrap}
 .specialties span{font-size:12px;line-height:1.5;color:#526870;background:#f0f5f6;border:1px solid #e4ecee;padding:6px 10px;border-radius:3px}
 .content-section{padding:32px 0 36px;border-top:1px solid var(--line)}
 .section-heading{display:flex;align-items:baseline;gap:15px;margin-bottom:28px}
-.section-number{font-size:12px;color:var(--teal);font-weight:500;letter-spacing:.05em;flex-shrink:0}
 .section-heading h2{margin:0;font-size:22px;line-height:1.45;letter-spacing:-.025em;font-weight:700}
 .job{display:grid;grid-template-columns:142px minmax(0,1fr);gap:26px;position:relative;padding-bottom:29px}
 .job:last-child{padding-bottom:0}
@@ -72,6 +70,7 @@ h3{font-size:17px;font-weight:600;line-height:1.5;letter-spacing:-.015em;margin:
 .audition{background:#073b3a;color:#7ee8d0;border-color:#398d7a}
 .tool-icon-image{width:32px;height:32px;display:block;object-fit:contain;background:transparent;border:0;border-radius:0}
 .skill-notes{display:grid;grid-template-columns:1.5fr 1fr;gap:32px;margin-top:27px}
+.skill-notes .ai-skills{grid-column:1/-1}
 .skill-notes h3{font-size:14px}
 .skill-notes p{font-size:14px;line-height:1.85;color:var(--muted);margin:7px 0 0}
 .language-row{display:grid;grid-template-columns:142px minmax(0,1fr);gap:26px}
