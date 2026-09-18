@@ -9,4 +9,6 @@ English web resume based on `CV 2024.pdf`, updated with details provided by the 
 
 Open `dist/index.html` to view locally. No dependency installation or build step is required.
 
+To export a single-page A4 PDF, run `python scripts/export_pdf.py`. The exporter reads the current HTML, preserves the supplied logos and portrait, and writes to the workspace's `output/pdf/` directory. It requires Python, ReportLab, Pillow, and Arial regular/bold fonts; use `--font-regular`, `--font-bold`, and `--output` to override the defaults.
+
 Social media account names are shown as provided in the PDF, without links because no URLs were supplied. Education names are retained from the source for the owner to review.
