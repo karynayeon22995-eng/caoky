@@ -9,6 +9,16 @@ English web resume based on `CV 2024.pdf`, updated with details provided by the 
 
 Open `dist/index.html` to view locally. No dependency installation or build step is required.
 
+## Video portfolio
+
+`dist/portfolio.html` is the English video editing portfolio. It links to the resume and the three channels supplied by the owner: Thanh Cong – TC, Ngô Thiệu Vinh, and onchain.kidz. The owner confirmed video editing as their role across these channels.
+
+- `dist/portfolio-data.js`: nine selected public videos, English display titles, original titles, channel, platform, thumbnail, and source URL. Edit this file to replace or reorder videos.
+- `dist/portfolio-assets/`: thumbnails retrieved from each platform's public video metadata, stored locally to avoid expired image URLs.
+- `dist/portfolio.css` and `dist/portfolio.js`: responsive layout, channel filters, and an accessible video dialog using the official YouTube and TikTok players. Direct source links remain available if playback is restricted.
+
+The video selection was made from the supplied channels and can be refined by the owner. Public source URLs and channel attribution are preserved. No follower counts or performance claims are used.
+
 To export a single-page A4 PDF, run `python scripts/export_pdf.py`. The exporter reads the current HTML, preserves the supplied logos and portrait, and writes to the workspace's `output/pdf/` directory. It requires Python, ReportLab, Pillow, and Arial regular/bold fonts; use `--font-regular`, `--font-bold`, and `--output` to override the defaults.
 
 Social media account names are shown as provided in the PDF, without links because no URLs were supplied. Education names are retained from the source for the owner to review.
