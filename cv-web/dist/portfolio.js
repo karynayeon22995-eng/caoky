@@ -1,6 +1,13 @@
 (() => {
   'use strict';
-  const channels = {tc: 'Thanh Cong – TC', vinh: 'Ngô Thiệu Vinh', kidz: 'onchain.kidz', jupiter: 'JupiterZone'};
+  const channels = {
+    tc: 'Thanh Cong – TC',
+    vinh: 'Ngô Thiệu Vinh',
+    kidz: 'onchain.kidz',
+    jupiter: 'JupiterZone',
+    jpc: 'FG Care · JPC Official',
+    asean: 'Mekonglink · ASEAN David'
+  };
   const dialog = document.querySelector('.video-dialog');
   const player = dialog.querySelector('.player-container');
 

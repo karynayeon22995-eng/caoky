@@ -1,6 +1,54 @@
 // Selected public videos. Edit these entries to update the portfolio.
 const portfolioVideos = [
   {
+    "channel": "jpc",
+    "platform": "tiktok",
+    "id": "7238419706036669697",
+    "title": "Hãy cẩn thận!",
+    "url": "https://www.tiktok.com/@jpc.official/video/7238419706036669697",
+    "thumbnail": "portfolio-assets/7238419706036669697.avif"
+  },
+  {
+    "channel": "jpc",
+    "platform": "tiktok",
+    "id": "7236567767686696193",
+    "title": "Hãy cẩn thận với Butolinum",
+    "url": "https://www.tiktok.com/@jpc.official/video/7236567767686696193",
+    "thumbnail": "portfolio-assets/7236567767686696193.avif"
+  },
+  {
+    "channel": "jpc",
+    "platform": "tiktok",
+    "id": "7242244023249947905",
+    "title": "Đừng chủ quan!",
+    "url": "https://www.tiktok.com/@jpc.official/video/7242244023249947905",
+    "thumbnail": "portfolio-assets/7242244023249947905.avif"
+  },
+  {
+    "channel": "asean",
+    "platform": "tiktok",
+    "id": "7638571806533733653",
+    "title": "The best nap ever is nap at the office",
+    "url": "https://www.tiktok.com/@asean.david/video/7638571806533733653",
+    "thumbnail": "portfolio-assets/7638571806533733653.avif"
+  },
+  {
+    "channel": "asean",
+    "platform": "tiktok",
+    "id": "7645245221919395092",
+    "title": "Not a single second wasted when it’s nap time",
+    "url": "https://www.tiktok.com/@asean.david/video/7645245221919395092",
+    "thumbnail": "portfolio-assets/7645245221919395092.avif"
+  },
+  {
+    "channel": "asean",
+    "platform": "tiktok",
+    "id": "7635801206878702856",
+    "title": "No. 1 Rule of Working in Vietnam: NAP",
+    "url": "https://www.tiktok.com/@asean.david/video/7635801206878702856",
+    "thumbnail": "portfolio-assets/7635801206878702856.avif"
+  },
+  {
     "channel": "tc",
     "platform": "youtube",
     "id": "TOwH7wCPTes",
