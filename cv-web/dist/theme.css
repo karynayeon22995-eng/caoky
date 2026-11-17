@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500;600;700&display=swap');
+
+:root {
+  --paper: #fff;
+  --ink: #111;
+  --muted: #424754;
+  --blue: #2457ff;
+  --tint: #eef2ff;
+  --line: #ced7f4;
+  --sans: 'Be Vietnam Pro', Arial, sans-serif;
+  --mono: 'IBM Plex Mono', Consolas, monospace;
+  --page-width: 1192px;
+  --page-gutter: 24px;
+  --pixel-dots: radial-gradient(circle, var(--blue) 1px, transparent 1.5px);
+  --pixel-pitch: 8px;
+}
+
+.pixel-page { isolation: isolate; }
+.page-pattern {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: .19;
+  mask-image: linear-gradient(transparent, #000 17%, #000 35%, #0004 52%, #000 75%, transparent);
+}
+.page-pattern::before, .page-pattern::after {
+  content: '';
+  position: absolute;
+  inset-block: 0;
+  width: clamp(var(--page-gutter), calc((100% - var(--page-width)) / 2), 180px);
+  background: var(--pixel-dots) center 0 / var(--pixel-pitch) var(--pixel-pitch);
+  animation: pixel-pattern-drift 24s ease-in-out infinite alternate;
+}
+.page-pattern::before {
+  inset-inline-start: 0;
+  mask-image: linear-gradient(to right, #000 25%, transparent);
+}
+.page-pattern::after {
+  inset-inline-end: 0;
+  mask-image: linear-gradient(to left, #000 25%, transparent);
+  animation-direction: alternate-reverse;
+}
+@keyframes pixel-pattern-drift {
+  to { background-position-y: 16px; }
+}
+.pixel-page::before, .pixel-page::after {
+  content: '';
+  position: fixed;
+  z-index: -1;
+  inset-block: 0;
+  width: max(var(--page-gutter), calc((100% - var(--page-width)) / 2));
+  pointer-events: none;
+  opacity: .26;
+}
+.pixel-page::before {
+  inset-inline-start: 0;
+  background:
+    linear-gradient(var(--blue) 0 0) 38% 18% / 8px 2px no-repeat,
+    linear-gradient(var(--blue) 0 0) 38% 18% / 2px 8px no-repeat,
+    linear-gradient(var(--blue) 0 0) 66% 35% / 4px 4px no-repeat,
+    linear-gradient(var(--blue) 0 0) 32% 62% / 7px 7px no-repeat,
+    linear-gradient(var(--blue) 0 0) 62% 83% / 4px 4px no-repeat;
+  animation: gutter-drift 14s ease-in-out infinite alternate;
+}
+.pixel-page::after {
+  inset-inline-end: 0;
+  background:
+    linear-gradient(var(--blue) 0 0) 58% 13% / 5px 5px no-repeat,
+    linear-gradient(var(--blue) 0 0) 65% 41% / 10px 2px no-repeat,
+    linear-gradient(var(--blue) 0 0) 65% 41% / 2px 10px no-repeat,
+    linear-gradient(var(--blue) 0 0) 35% 67% / 4px 4px no-repeat,
+    linear-gradient(var(--blue) 0 0) 68% 87% / 7px 7px no-repeat;
+  animation: gutter-drift 17s ease-in-out infinite alternate-reverse;
+}
+@keyframes gutter-drift {
+  from { transform: translateY(-7px); opacity: .20; }
+  to { transform: translateY(7px); opacity: .36; }
+}
+
+@media (max-width: 680px) {
+  :root { --page-gutter: 16px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .page-pattern::before, .page-pattern::after,
+  .pixel-page::before, .pixel-page::after { animation: none; }
+}
